@@ -1,2 +1,2 @@
-#Orem-recycling-map ###(a working title)
+#Orem-recycling-map (a working title)
 ==================
