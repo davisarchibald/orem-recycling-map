@@ -8,8 +8,30 @@
 <![endif]-->
 
 <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+<script src="orem-city-bounds.js"></script>
+<style type="text/css">
+	#recyclingMap {
+		height: 400px;
+	}
+</style>
 </head>
 <body>
-
+	<div id="recyclingMap"></div>
+	<script type="text/javascript">
+	 var map = L.map('recyclingMap').setView([40.298753, -111.696486], 12);
+	 L.tileLayer('http://{s}.tile.cloudmade.com/ef14c18343234773af86eb0bc3882836/997/256/{z}/{x}/{y}.png', {
+	    maxZoom: 18,
+	}).addTo(map);
+	 var myStyle = {
+	 	fillColor: "red",
+		color: "#000",
+		weight: 1,
+		opacity:1,
+		fillOpacity:0.7
+	 }
+	 L.geoJson(oremData, {
+	 	style : myStyle
+	 }).addTo(map);
+	</script>
 </body>
 </html>
