@@ -92,3 +92,24 @@ friday = L.geoJson(recyclingfour, {
 	});
 });
 
+/*Labels*/
+var mondayIcon = L.divIcon({html: 'MONDAY', className : 'label'});
+centerMonday = monday.getBounds().getCenter();
+L.marker(centerMonday, {icon: mondayIcon}).addTo(map);
+
+var tuesdayIcon = L.divIcon({html: 'TUESDAY', className : 'label'});
+centerTuesday = tuesday.getBounds().getCenter();
+L.marker(centerTuesday, {icon: tuesdayIcon}).addTo(map);
+
+var wednesdayIcon = L.divIcon({html: 'WEDNESDAY', className : 'label'});
+centerWednesday = wednesday.getBounds().getCenter();
+L.marker(centerWednesday, {icon: wednesdayIcon}).addTo(map);
+
+var thursdayIcon = L.divIcon({html: 'THURSDAY', className : 'label'});
+centerThursday = thursday.getBounds().getCenter();
+L.marker(centerThursday, {icon: thursdayIcon}).addTo(map);
+
+var fridayIcon = L.divIcon({html: 'FRIDAY', className : 'label'});
+centerFriday = friday.getBounds().getCenter();
+L.marker(centerFriday, {icon: fridayIcon}).addTo(map);
+
