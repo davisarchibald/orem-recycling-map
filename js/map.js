@@ -1,7 +1,8 @@
 /* Map */
-var map = L.map('recyclingMap').setView([40.298753, -111.696486], 13);
+L.mapbox.accessToken = 'pk.eyJ1IjoiZGF2aXNhcmNoaWJhbGQiLCJhIjoiY2l3ZjBrMGJ6MGN4bzJ4dGQ3a2kwMWYzeSJ9.5EDft6LcqGKVR5mpzmjggQ';
+var map = L.mapbox.map('recyclingMap').setView([40.298753, -111.696486], 13);
 /* Map Tile Layer*/
-L.tileLayer('http://{s}.tile.cloudmade.com/ef14c18343234773af86eb0bc3882836/997/256/{z}/{x}/{y}.png', {
+L.mapbox.tileLayer('mapbox.streets', {
 	maxZoom: 18,
 	minZoom : 12
 }).addTo(map);
@@ -108,4 +109,3 @@ L.marker(centerTuesday, {icon: tuesdayIcon}).addTo(map);
 L.marker(centerWednesday, {icon: wednesdayIcon}).addTo(map);
 L.marker(centerThursday, {icon: thursdayIcon}).addTo(map);
 L.marker(centerFriday, {icon: fridayIcon}).addTo(map);
-
